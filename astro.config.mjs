@@ -1,5 +1,4 @@
-// astro.config.mjs (La configuración CORRECTA)
-
+// astro.config.mjs
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({});

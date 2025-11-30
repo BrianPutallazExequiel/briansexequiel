@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets"
+import logo1 from "../assets/logo1.png"
+import logo2 from "../assets/logo2.png"
+import logo3 from "../assets/logo3.png"
+import logo4 from "../assets/logo4.png"
+
+const logos = [logo1, logo2, logo3, logo4];
+---
+
+<section class="container">
+    <p class="title">Tu sitio web optimizado e integrado con herramientas como:</p>
+    <div class="slider-wrapper">
+        <div class="slide-track">
+            <Image class="logo" src={logo1} alt="Hola" />
+            <Image class="logo" src={logo2} alt="Hola" />
+            <Image class="logo" src={logo3} alt="Hola" />
+            <Image class="logo" src={logo4} alt="Hola" />
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .title {
+        font-size: .8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: var(--color-text);
+    }
+
+    .slider-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slide-track {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .slide {
+        width: 100%;
+        max-width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 12rem;
+        height: auto;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .slide-track {
+            gap: 2rem;
+        }
+      
+    }
+</style>
