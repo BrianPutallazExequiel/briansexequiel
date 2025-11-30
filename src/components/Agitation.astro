@@ -1,0 +1,201 @@
+---
+import { Image } from "astro:assets"
+import Traffic from "../assets/traffic.png"
+import Basket from "../assets/basket.svg"
+import Stars from "../assets/stars.png"
+import Caracol from "../assets/caracol.svg"
+---
+
+<section class="frustrations-section">
+  <div class="container">
+    <h2 class="main-title">
+      ¿Alguna de estas frustraciones <br />
+      <strong>le suena familiar?</strong>
+    </h2>
+
+    <p class="subtitle">
+      La mayoría de los negocios online sufren de estos “asesinos silenciosos” que destruyen el ROI publicitario
+      y la eficiencia de su equipo de ventas.
+    </p>
+
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-icon"> 
+            <Image src={Traffic} alt="Traffic"/>
+        </div>
+        <h3 class="card-title">Tráfico de Calidad Baja que se Esfuma</h3>
+        <p class="card-text">
+          Estás pagando por clics en Google y Facebook, pero la tasa de rebote en su Landing Page es alta.<br /><br />
+          <em>“Estás tirando dinero por la ventana”</em>
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-icon"> 
+            <Image src={Basket} alt="Basket"/>
+        </div>
+        <h3 class="card-title">Leads Basura que Hacen Perder Tiempo</h3>
+        <p class="card-text">
+          El formulario de su página es demasiado genérico y atrae a prospectos no cualificados. Su equipo de ventas
+          pierde horas valiosas llamando a personas que nunca cierran.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-icon"> 
+            <Image src={Stars} alt="Stars"/>
+        </div>
+        <h3 class="card-title">Diseño “Bonito” sin Pruebas</h3>
+        <p class="card-text">
+          Su página es estéticamente agradable, pero se creó basada en la intuición, no en los datos. No sabe qué
+          titular, imagen o CTA genera más ventas.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-icon"> 
+            <Image src={Caracol} alt="Caracol"/>
+        </div>
+        <h3 class="card-title">Páginas Lentas y No Optimizadas</h3>
+        <p class="card-text">
+          Su Landing Page tarda más de 3 segundos en cargar en móvil, castigando su posicionamiento y haciendo que
+          sus usuarios se frustren y abandonen antes de ver su oferta.
+        </p>
+      </div>
+    </div>
+
+    <div class="conclusion-box">
+        <p class="conclusion-italic">
+          "Si te identificaste con alguno de estos puntos, no estás solo."
+        </p>
+        <p class="conclusion-text">
+          La mayoría de las agencias se centran en el <strong class="text-bold"> "diseño"</strong>... nosotros nos centramos en el <strong class="text-bold"> ROI </strong>. Deje de adivinar. Nuestra metodología de <strong class="text-bold">CRO Avanzado</strong> se basa en los datos de <strong class="text-bold">Eye-Tracking (Hotjar)</strong> y <strong class="text-bold">pruebas A/B</strong> para convertir estos dolores en <strong class="text-bold">ganancias predecibles</strong> y eficientes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .frustrations-section {
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--color-text);
+    margin-bottom: 1.2rem;
+  }
+
+  .main-title strong {
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  .card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+  }
+
+  .card-text {
+    font-size: 16px;
+    color: #444444;
+    line-height: 1.6;
+  }
+
+  .card-text em {
+    font-weight: 600;
+  }
+
+  .conclusion-box {
+    max-width: 72rem;
+    margin: 4rem auto 0 auto;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid #f0f0f0;
+    background: var(--gradient-bg);
+  }
+
+  .conclusion-italic {
+  text-align: center;
+  font-style: italic;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  }
+
+  .conclusion-text {
+    text-align: center;
+    color: #1a202c;
+    line-height: 1.6;
+}
+
+  .text-bold {
+  font-weight: bold;
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .main-title {
+      font-size: 36px;
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .highlight-text {
+      font-size: 17px;
+    }
+  }
+</style>

@@ -40,6 +40,7 @@
     --orange-light: #FFBD80;
     --orange-extralight: #FFFBF6;
     --gradient: linear-gradient(to right, #6604FD, #FD003C, #FDBA01);
+    --gradient-bg: linear-gradient(to right, #6604FD50, #FD003C50, #FDBA0150);
     --tipo-principal: 'Poppins-Regular', sans-serif;
     --tipo-secundaria: Verdana;
     --border-radius: 4px; 
