@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import Optimization from "../assets/optimization.svg";
+---
+
+<section class="problem-section">
+  <h3 class="problem-title">El sistema de optimización de landing pages</h3>
+  <p class="problem-text">
+    A lo largo de mi carrera me especialice en desarrollo web, diseño de
+    experiencia de usuario y marketing, lo que me da el conocimiento
+    especializado que llevara a tu negocio al siguiente nivel.
+  </p>
+  <div class="problem-image-container">
+    <div class="problem-image">
+      <Image src={Optimization} alt="Optimization" />
+    </div>
+    <div class="problem-steps">
+      <div class="problem-step">
+        <h4 class="problem-step-title">Problema</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi veniam cum et aperiam molestias.</p>
+      </div>
+      <div class="problem-step">
+        <h4 class="problem-step-title">Agitación</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi veniam cum et aperiam molestias.</p>
+      </div>
+      <div class="problem-step">
+        <h4 class="problem-step-title">Solución</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi veniam cum et aperiam molestias.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem-section {
+    padding: 6rem 1rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .problem-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-title);
+  }
+  .problem-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .problem-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .problem-image {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 2rem;
+  }
+  .problem-steps {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+  }
+  .problem-step {
+    background-color: var(--color-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+  }
+  .problem-step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-title);
+  }
+  .problem-step p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+  @media (max-width: 768px) {
+  .problem-image-container {
+    flex-direction: column;
+  }
+  .problem-image {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .problem-steps {
+    max-width: 100%;  
+    margin-top: 2rem;
+  }
+  }
+</style>
